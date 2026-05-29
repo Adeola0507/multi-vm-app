@@ -8,7 +8,7 @@
 # and communicate by IP address + port.
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "spox/ubuntu-arm"   # ubuntu/jammy64 for windows 
+  config.vm.box = "ubuntu/jammy64"   # ubuntu/jammy64 for windows 
   
   # Speed up provisioning: don't auto-update the box every time
   config.vm.box_check_update = false
@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 
     db.vm.provider "virtualbox" do |vb|
       vb.name   = "vm-db"
-      vb.memory = 512
+      vb.memory = 1024
       vb.cpus   = 1
     end
 
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
 
     api.vm.provider "virtualbox" do |vb|
       vb.name   = "vm-api"
-      vb.memory = 512
+      vb.memory = 1024
       vb.cpus   = 1
     end
 
@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
 
     web.vm.provider "virtualbox" do |vb|
       vb.name   = "vm-web"
-      vb.memory = 512
+      vb.memory = 1024
       vb.cpus   = 1
     end
 
